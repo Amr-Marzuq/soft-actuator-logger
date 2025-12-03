@@ -43,6 +43,15 @@ The GUI is built with **PySide6** and **pyqtgraph**, and it provides real-time p
 
 > Note: You can adapt the Arduino code to match this protocol.
 
+## GUI Preview
+
+### Main Connection Interface
+<img width="1492" height="902" alt="gui_Connection" src="https://github.com/user-attachments/assets/a3f848d5-951b-4c5b-8f89-5fa4c020d79d" />
+### Calibration Tab
+<img width="1486" height="900" alt="calibration_tab" src="https://github.com/user-attachments/assets/e4a0a5a4-bf5c-48d2-84f8-ee0256e16d19" />
+### Real-time Plotting
+<img width="1487" height="900" alt="Data_Plotter" src="https://github.com/user-attachments/assets/adb346ea-6aba-4053-962e-5b6ae3bb515a" />
+
 ---
 
 ## Installation
