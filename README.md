@@ -43,16 +43,66 @@ The GUI is built with **PySide6** and **pyqtgraph**, and it provides real-time p
 
 > Note: You can adapt the Arduino code to match this protocol.
 
-## GUI Preview
+--------------------------------------------------------------------------------
+USAGE
+--------------------------------------------------------------------------------
 
-### Main Connection Interface
-<img width="1492" height="902" alt="gui_Connection" src="https://github.com/user-attachments/assets/a3f848d5-951b-4c5b-8f89-5fa4c020d79d" />
-### Calibration Tab
-<img width="1486" height="900" alt="calibration_tab" src="https://github.com/user-attachments/assets/e4a0a5a4-bf5c-48d2-84f8-ee0256e16d19" />
-### Real-time Plotting
-<img width="1487" height="900" alt="Data_Plotter" src="https://github.com/user-attachments/assets/adb346ea-6aba-4053-962e-5b6ae3bb515a" />
+Run the application:
 
----
+```bash
+python src/pressure_displacement_logger.py
+```
+
+1) Connection Tab
+- Go to the Connection tab
+- Select the correct COM port for the Arduino
+- Click Connect
+- The status indicator will turn green when successful
+
+2) Calibration Tab
+Perform two‑point calibration for both sensors.
+
+Pressure Calibration:
+- Set the known low pressure value
+- Click "Record low"
+- Set the known high pressure value
+- Click "Record high"
+
+Displacement Calibration:
+- Set the low displacement value (mm)
+- Click "Record low"
+- Set the high displacement value (mm)
+- Click "Record high"
+
+The application automatically computes a linear mapping from voltage → physical units.
+
+3) Plotter Tab
+- Set the sampling rate (samples per second)
+- Click Start to begin live data logging
+- Real‑time pressure and displacement plots will update continuously
+- Click Stop to finish the experiment
+- Export data using:
+  • Save CSV
+  • Copy data (CSV)
+
+--------------------------------------------------------------------------------
+PROJECT BACKGROUND
+--------------------------------------------------------------------------------
+
+This tool was developed as part of my doctoral research in robotics, specifically 
+for characterizing soft pneumatic/electrohydrodynamic actuators.
+
+It enables:
+- Measuring internal pressure inside soft robotic actuators
+- Measuring external deformation/displacement using a laser sensor
+- Logging synchronized data for actuator performance analysis
+
+It demonstrates skills in:
+- Python GUI development (PySide6)
+- Real-time visualization (pyqtgraph)
+- Sensor integration & Arduino communication
+- Experimental automation and data acquisition
+
 
 ## Installation
 
@@ -67,3 +117,16 @@ cd soft-actuator-logger
 
 # Install dependencies
 pip install -r requirements.txt
+```
+## GUI Preview
+
+### Main Connection Interface
+<img width="1492" height="902" alt="gui_Connection" src="https://github.com/user-attachments/assets/a3f848d5-951b-4c5b-8f89-5fa4c020d79d" />
+### Calibration Tab
+<img width="1486" height="900" alt="calibration_tab" src="https://github.com/user-attachments/assets/e4a0a5a4-bf5c-48d2-84f8-ee0256e16d19" />
+### Real-time Plotting
+<img width="1487" height="900" alt="Data_Plotter" src="https://github.com/user-attachments/assets/adb346ea-6aba-4053-962e-5b6ae3bb515a" />
+
+---
+
+
