@@ -31,12 +31,12 @@ The GUI is built with **PySide6** and **pyqtgraph**, and it provides real-time p
 
 ---
 
-## Hardware Setup (Example)
+## Hardware Setup 
 
-- **Microcontroller**: Arduino (e.g., Nano / Pro Micro)
+- **Microcontroller**: Arduino (Pro Micro)
 - **Sensors**:
-  - Keyence pressure sensor (analog voltage output)
-  - Laser displacement sensor (analog voltage output)
+  - KEYENCE GP-M001T pressure sensor (analog voltage output)
+  - KEYENCE LK-G3000 laser displacement sensor (analog voltage output)
 - The Arduino firmware is expected to:
   - Send **pressure voltage** when receiving the command `'a'`
   - Send **displacement voltage** when receiving the command `'b'`
